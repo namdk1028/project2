@@ -40,6 +40,13 @@ INSTALLED_APPS = [
 
     # apps
     'accounts'
+
+    # rest_auth
+    'django.contrib.sites',
+    'rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
 ]
 
 MIDDLEWARE = [
