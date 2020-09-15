@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Main from '../views/Main.vue'
+import Main from '../views/main/Main.vue'
 
 Vue.use(VueRouter)
 
@@ -11,19 +11,24 @@ Vue.use(VueRouter)
     component: Main
   },
   {
-    path: '/Home',
+    path: '/home',
     name: 'Home',
-    component: () => import('../views/Home.vue')
+    component: () => import('../views/home/Home.vue')
   },
   {
-    path: '/Interview',
+    path: '/interview',
     name: 'Interview',
-    component: () => import('../views/Interview.vue')
+    component: () => import('../views/interview/Interview.vue')
   },
   {
-    path: '/MyPage',
+    path: '/ready',
+    name: 'Ready',
+    component: () => import('../views/interview/Ready.vue')
+  },
+  {
+    path: '/mypage',
     name: 'MyPage',
-    component: () => import('../views/MyPage.vue')
+    component: () => import('../views/mypage/MyPage.vue')
   }
 ]
 

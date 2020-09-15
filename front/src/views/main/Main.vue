@@ -1,17 +1,16 @@
 <template>
   <div class="main">
-    <Start />
-    <h1>MainPage</h1>
+    <Header />
   </div>
 </template>
 
 <script>
-import Start from '../components/main/Start.vue'
+import Header from '../../components/main/Header.vue'
 
 export default {
   name: 'Main',
   components: {
-    Start,
+    Header,
   }
 }
 
