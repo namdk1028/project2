@@ -1,13 +1,19 @@
 <template>
   <div class="main">
-    <h1>MainPage</h1>
-    <router-link to="/Interview">Interview</router-link>
+    <Header />
   </div>
 </template>
 
 <script>
+import Header from '../../components/main/Header.vue'
+
 export default {
   name: 'Main',
   components: {
+    Header,
   }
 }
+
+</script>
+
+<style></style>
