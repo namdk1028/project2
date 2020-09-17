@@ -26,11 +26,16 @@ const routes = [
     component: () => import('../views/interview/Ready.vue')
   },
   {
-    path: '/mypage',
-    name: 'MyPage',
-    component: () => import('../views/mypage/MyPage.vue')
-  }
-]
+    path: "/Login",
+    name: "Login",
+    component: () => import("../views/user/Login.vue"),
+  },
+  {
+    path: "/Signup",
+    name: "Signup",
+    component: () => import("../views/user/Signup.vue"),
+  },
+];
 
 const router = new VueRouter({
   mode: "history",
