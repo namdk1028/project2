@@ -3,7 +3,11 @@
     <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
       <router-link to="/">Main</router-link>
       <router-link to="/home">Home</router-link>
-      <router-link to="/mypage">MyPage</router-link>
+      <div>
+        <router-link to="/login">Login</router-link> |
+        <router-link to="/signup">Signup</router-link> |
+        <router-link to="/mypage">MyPage</router-link>
+      </div>
     </nav>
   </div>
 </template>
