@@ -6,14 +6,7 @@
         <v-row justify="center">
           <v-col cols="10" sm="8" md="6" lg="4" style="max-height:800px; ">
             <v-form class="form" ref="form" v-model="valid" lazy-validation>
-              <v-text-field
-                v-model="email"
-                :rules="emailRules"
-                label="이메일"
-                required
-                outlined
-                dense
-              ></v-text-field>
+              <v-text-field v-model="email" :rules="emailRules" label="이메일" required outlined dense></v-text-field>
               <v-text-field
                 v-model="password"
                 :rules="[rules.required, rules.min]"
@@ -24,22 +17,12 @@
                 outlined
                 dense
               ></v-text-field>
-              <v-btn
-                large
-                class="button"
-                :disabled="!valid"
-                color="#0277BD"
-                @click="login"
-                >로그인</v-btn
-              >
+              <v-btn large class="button" :disabled="!valid" color="#0277BD" @click="login">로그인</v-btn>
             </v-form>
             <div class="login-body text-center">
               <div class="add-option">
-                <router-link to="/Signup" class="routers">회원가입</router-link
-                >|
-                <router-link to="/Findpw" class="routers"
-                  >비밀번호 찾기</router-link
-                >
+                <router-link to="/Signup" class="routers">회원가입</router-link>|
+                <router-link to="/Findpw" class="routers">비밀번호 찾기</router-link>
               </div>
             </div>
           </v-col>
@@ -89,7 +72,7 @@ export default {
             alert(`로그인 완료 ${user.email}`);
             this.$router.push("/Home");
           })
-          .catch(function(error) {
+          .catch(function (error) {
             const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage + errorCode);
@@ -115,7 +98,7 @@ export default {
   display: block;
   font-size: 16px;
   width: 100%;
-  padding: px;
+  padding: 10px;
 }
 .add-option .routers {
   margin: 0 5px;
