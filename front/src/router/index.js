@@ -1,6 +1,6 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Main from "../views/Main.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Main from '../views/main/Main.vue'
 
 Vue.use(VueRouter);
 
@@ -11,26 +11,26 @@ const routes = [
     component: Main,
   },
   {
-    path: "/Home",
-    name: "Home",
-    component: () => import("../views/Home.vue"),
+    path: '/home',
+    name: 'Home',
+    component: () => import('../views/home/Home.vue')
   },
   {
-    path: "/Interview",
-    name: "Interview",
-    component: () => import("../views/Interview.vue"),
+    path: '/interview',
+    name: 'Interview',
+    component: () => import('../views/interview/Interview.vue')
   },
   {
-    path: "/MyPage",
-    name: "MyPage",
-    component: () => import("../views/MyPage.vue"),
+    path: '/ready',
+    name: 'Ready',
+    component: () => import('../views/interview/Ready.vue')
   },
   {
-    path: "/Login",
-    name: "Login",
-    component: () => import("../views/Login.vue"),
-  },
-];
+    path: '/mypage',
+    name: 'MyPage',
+    component: () => import('../views/mypage/MyPage.vue')
+  }
+]
 
 const router = new VueRouter({
   mode: "history",
