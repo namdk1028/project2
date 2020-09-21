@@ -39,7 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # apps
-    'accounts'
+    'accounts',
+    'interviews',
+
+    # DRF
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+
+    # rest_auth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +135,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'accounts.User'
+
+SITE_ID = 1
