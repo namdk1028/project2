@@ -9,6 +9,12 @@ class Interview(models.Model):
                              on_delete=models.CASCADE, default="GUEST")
 
 
+class Category(models.Model):
+    category = models.CharField(max_length=50)
+
+
 class Question(models.Model):
     question = models.CharField(max_length=200)
-    interviews = models.ManyToManyField(Interview)
+    question_category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    time = models.IntegerField()
+    # interviews = models.ManyToManyField(Interview)
