@@ -1,12 +1,18 @@
 <template>
   <div>
     <v-row justify="center">
+      {{ selectedQuestion }}
       <v-expansion-panels popout>
         <v-expansion-panel
           v-for="(question, i) in questions.vision"
           :key="i"
         >
-          <v-expansion-panel-header>{{ question.title }}</v-expansion-panel-header>
+        <div class='d-flex ml-4'>
+          <v-checkbox v-model="selectedQuestion" :value=i color="red darken-3"></v-checkbox>
+          <v-expansion-panel-header>
+            {{ question.title }}
+            </v-expansion-panel-header>
+        </div>
           <v-expansion-panel-content>
             {{ question.content }}
             {{ question.time }} 분
@@ -21,6 +27,7 @@
 export default {
   data() {
     return {
+      selectedQuestion: [],
       questions: {
         vision: [
           {
@@ -70,6 +77,8 @@ export default {
         ],
       }
     }
+  },
+  props: {
   }
 }
 </script>

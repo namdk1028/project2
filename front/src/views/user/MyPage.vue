@@ -1,12 +1,19 @@
 <template>
   <div>
-    <h1>Mypage</h1>
+    <NavBar />
+    <Dashboard />
   </div>
 </template>
 
 <script>
-export default {
+import NavBar from '../../components/user/MyPageNavBar.vue'
+import Dashboard from '../../components/user/Dashboard.vue'
 
+export default {
+  components: {
+    NavBar,
+    Dashboard,
+  }
 }
 </script>
 
