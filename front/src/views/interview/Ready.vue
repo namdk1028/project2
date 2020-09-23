@@ -1,7 +1,6 @@
 <template>
   <div class='container'>
-    <h1>Ready</h1>
-    <Select />
+    <Select class='mt-4'/>
   </div>
 </template>
 
