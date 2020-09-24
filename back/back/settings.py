@@ -95,6 +95,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql_psycopg2",
+#         "NAME": "bulk_create",
+#         "USER": "bulk_create",
+#         "PASSWORD": "bulk_create",
+#         "HOST": "127.0.0.1",
+#         "PORT": "",
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
