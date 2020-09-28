@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+    version check
   </div>
 </template>
 
